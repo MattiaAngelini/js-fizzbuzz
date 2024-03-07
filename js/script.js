@@ -38,28 +38,30 @@ for (let i = 1; i <= 100; i++) {
     }
 
     //BONUS 1//
-     // creo costante che crea un elemento <div>
-     const newBox = document.createElement('div');
+    // creo costante che crea un elemento <div>
+    const newBox = document.createElement('div');
      // all'interno dell'elemento creato inserisco come contenuto i valori del loop for.
-     newBox.innerHTML = numberMod;
+    newBox.innerHTML = numberMod;
      // all'elemento creato aggiungo la classe .box creata precedentemente nel css.
-     newBox.classList.add('box');
+    newBox.classList.add('box');
 
     //BONUS 2//
     // creo condizione per aggiungere una classe alle box (bg-color nel css),
     // in base ai risultati delle condizioni precedenti si applicano
     // classi bg-color qui selezionate:
     
-     if (numberMod === "Fizz") {
+    if (numberMod === "Fizz") {
         newBox.classList.add('fizz');
-    } else if (numberMod === "Buzz") {
+    } 
+    else if (numberMod === "Buzz") {
         newBox.classList.add('buzz');
-    } else if (numberMod === "FizzBuzz") {
+    } 
+    else if (numberMod === "FizzBuzz") {
         newBox.classList.add('fizzbuzz');
     }
 
-     // "appendo" l'elemento appena creato  al container presente nel DOM.
-     numbContainer.append(newBox);
+    // "appendo" l'elemento appena creato  al container presente nel DOM.
+    numbContainer.append(newBox);
 
 }
 
