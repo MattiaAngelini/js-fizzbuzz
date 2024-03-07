@@ -11,7 +11,8 @@
 //2. Proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 
 //BONUS 1:
-//Crea un container nel DOM , aggiungendo un elemento html con il numero o la stringa corretta da mostrare.
+//Crea un container nel DOM , aggiungendo un elemento html con il numero o 
+//la stringa corretta da mostrare.
 
 //BONUS 2:
 //Applica stili differenti agli elementi aggiunti al DOM nel *BONUS 1*, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
@@ -20,8 +21,12 @@
 
 
 
-// stampare in console tutti i numeri da 1 a 100
 
+//  selettore per il container creato nel DOM, 
+//in cui inserirò box con all'interno valori del ciclo FOR.
+const numbContainer = document.querySelector('#numbers-container');
+
+// stampare in console tutti i numeri da 1 a 100
 for (let i = 1; i <= 100; i++) {
    
     let numberMod;
@@ -35,8 +40,15 @@ for (let i = 1; i <= 100; i++) {
         numberMod = i;
     }
 
-    console.log(numberMod);
+     // creo costante che crea un elemento <div>
+     const newBox = document.createElement('div');
+     // all'interno dell'elemento creato inserisco come contenuto i valori del loop for.
+     newBox.innerHTML = numberMod;
+     // all'elemento creato aggiungo la classe .box creata precedentemente nel css.
+     newBox.classList.add('box');
+     // "appendo" l'elemento appena creato  al container presente nel DOM.
+     numbContainer.append(newBox);
+
 }
 
-
-
+    
