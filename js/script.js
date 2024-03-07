@@ -15,8 +15,9 @@
 //la stringa corretta da mostrare.
 
 //BONUS 2:
-//Applica stili differenti agli elementi aggiunti al DOM nel *BONUS 1*, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
-//Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
+//Applica stili differenti agli elementi aggiunti al DOM nel *BONUS 1*,
+// a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
+
 //Mi raccomando facciamo il bonus solo dopo aver completato la consegna base e averne testato il corretto funzionamento.
 
 
@@ -31,10 +32,13 @@ for (let i = 1; i <= 100; i++) {
    
     let numberMod;
     //Per i multipli di 3 stampi “Fizz” al posto del numero.  
-    if (i % 3 === 0) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        numberMod = "FizzBuzz";
+    } else if (i % 3 === 0) {
+        // Per i multipli di 3 stampi “Fizz” al posto del numero.
         numberMod = "Fizz";  
-    //Per i multipli di 5 stampi “Buzz” al posto del numero.      
     } else if (i % 5 === 0) {
+        // Per i multipli di 5 stampi “Buzz” al posto del numero.
         numberMod = "Buzz";
     } else {
         numberMod = i;
