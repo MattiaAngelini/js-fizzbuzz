@@ -14,6 +14,12 @@
     justify-content: center;
 }
 
+.text-center {
+    padding: 20px;
+    text-align: center;
+    font-size: 50px;
+}
+
 .box {
     width: 80px;
     height: 80px;
